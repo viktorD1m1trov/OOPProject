@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace Test
 {
-    class Participant : Person
+    class Participant : Person, IParticipant, IDriver
     {
+        private int moneyPaid;
+        private int gsm;
+        private int email;
+    
         public int HasPaid
         {
             get
@@ -31,6 +35,28 @@ namespace Test
         }
 
         public int Mai
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public int MoneyPaid
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public int EMai
         {
             get
             {

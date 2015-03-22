@@ -51,6 +51,7 @@
     <Compile Include="Participant.cs" />
     <Compile Include="PaymentMethod.cs" />
     <Compile Include="Person.cs" />
+    <Compile Include="Rooms.cs" />
     <Compile Include="Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

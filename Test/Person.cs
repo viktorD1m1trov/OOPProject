@@ -28,6 +28,21 @@ namespace Test
             {
             }
         }
+
+        public void RoomDistribuition(Participant person, Rooms room)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void CarDistribution (Participant person, Participant driver)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void PrintSummary(Event newEvent)
+        {
+            throw new NotImplementedException();
+        }
     }
 
     
