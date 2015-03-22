@@ -11,7 +11,7 @@ namespace Test
         private int budget;
         private int field;
     
-        public int DateTime
+        public DateTime DateTime
         {
             get
             {
