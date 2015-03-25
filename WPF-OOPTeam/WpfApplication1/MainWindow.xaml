@@ -1,0 +1,29 @@
+﻿<Window
+        
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:System="clr-namespace:System;assembly=mscorlib" x:Name="Home" x:Class="WpfApplication1.MainWindow"
+        
+        Title="EventName" Height="350" Width="525" IsEnabled="False">
+
+    <Window.Resources>
+        <Style x:Key="MyStyle" TargetType="{x:Type Control}">
+            <Setter Property="FontFamily" Value="Consolas"/>
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
+    </Window.Resources>
+    <Grid >
+        <DataGrid HorizontalAlignment="Left" Margin="187,44,0,0" VerticalAlignment="Top" Height="227" Width="320"/>
+        <!--ItemsSource="{Binding Source = MyCollection}"-->
+        <Label Style="{StaticResource MyStyle}" Content="Participants" HorizontalAlignment="Left" Margin="292,10,0,0" VerticalAlignment="Top"/>
+        <Label Style="{StaticResource MyStyle}" Content="Events" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.475,0.498" Margin="58,21,0,0"/>
+        <ComboBox HorizontalAlignment="Left" Margin="31,55,0,0" VerticalAlignment="Top" Width="120" Height="21">
+            <Label Content="Event0" HorizontalAlignment="Stretch" VerticalAlignment="Center"></Label>
+            <Label Content="Event1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"></Label>
+            <Label Content="Event2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"></Label>
+
+        </ComboBox>
+        <TextBlock HorizontalAlignment="Left" Margin="31,145,0,0" TextWrapping="Wrap" Text="Event Info" VerticalAlignment="Top" Height="126" Width="120"/>
+
+    </Grid>
+</Window>
