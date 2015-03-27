@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -64,6 +65,15 @@ namespace Test
             }
             set
             {
+            }
+        }
+        //dobaveno Andrej 27.03
+        public void AddMusicalWish(string wish)
+        {
+            StreamWriter sw = new StreamWriter("..\\..\\MusicalWishList.txt");
+            using (sw)
+            {
+                sw.WriteLine(wish);
             }
         }
     }

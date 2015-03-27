@@ -43,8 +43,10 @@
   <ItemGroup>
     <Compile Include="Admin.cs" />
     <Compile Include="Driver.cs" />
+    <Compile Include="Enumerations\EventStaffType.cs" />
     <Compile Include="Event.cs" />
     <Compile Include="EventStaff.cs" />
+    <Compile Include="Enumerations\Gender.cs" />
     <Compile Include="IParticipant.cs" />
     <Compile Include="Location.cs" />
     <Compile Include="Organizer.cs" />

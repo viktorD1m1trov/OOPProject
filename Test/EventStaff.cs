@@ -2,46 +2,18 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Test.Enumerations;
 
 namespace Test
 {
+    //dobaveno Andrej 27.03
     public class EventStaff : Person
     {
-        private int dj;
-        private int animator;
-        private int singer;
-    
-        public int DJ
+        public EventStaff(string firstName, string lastName, Gender sex = Gender.nonSpecified, EventStaffType type = EventStaffType.other):base (firstName,lastName,sex)
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            this.Type = type;
         }
 
-        public int Singer
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
-        public int Animator
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public EventStaffType Type { get; private set; }
     }
 }

@@ -7,9 +7,14 @@ namespace Test
 {
     public class Event
     {
+        //dobaveno Andrej 27.03
+        private List<EventStaff> eventStaffs = new List<EventStaff>();
+
+
         private int meetingPoint;
         private int budget;
         private int field;
+        
     
         public DateTime DateTime
         {
@@ -77,15 +82,16 @@ namespace Test
             }
         }
 
-        public int EventStaff
+        //dobaveno Andrej 27.03.
+        public List<EventStaff> EventStaff { get { return this.eventStaffs; } }
+        
+        public void AddEventStaff(EventStaff staff)
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            this.EventStaff.Add(staff);
+        }
+        public void RemoveEventStaff(EventStaff staff)
+        {
+            this.EventStaff.Remove(staff);
         }
     }
 }

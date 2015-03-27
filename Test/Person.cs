@@ -2,33 +2,27 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Test.Enumerations;
 
 namespace Test
 {
+    
     public abstract class Person
     {
-        public int Name
+        //dobaveno Andrej 27.03
+        public Person(string firstName, string lastName, Gender sex = Gender.nonSpecified)
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.Gender = sex;
         }
 
-        public int Gender
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public string FirstName { get; private set; }
+        public string LastName { get; private set; }
 
+        public Gender Gender { get; private set; }
+
+        //dobaveno Andrej 27.03 nagore
         public void RoomDistribuition(Participant person, Rooms room)
         {
             throw new System.NotImplementedException();
