@@ -14,7 +14,7 @@ namespace Test
             set;
         }
 
-        int MeetPoint
+        string MeetPoint
         {
             get;
             set;

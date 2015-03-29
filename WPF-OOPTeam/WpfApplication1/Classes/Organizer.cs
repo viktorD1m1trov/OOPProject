@@ -7,14 +7,25 @@ namespace Test
 {
     public class Organizer : Participant, IParticipant
     {
-        public int Event
+        private Event eventToOrganize;
+        //constructor 
+        public Organizer()
+        { }
+
+        public Organizer (string name, string gender, Event eventToJoin, string email, string gsm, decimal moneyPaid) 
+            : base (name, eventToJoin, email, gsm, moneyPaid)
+        {
+        }
+
+        public Event EventToOrganize
         {
             get
             {
-                throw new System.NotImplementedException();
+                return this.eventToOrganize;
             }
             set
             {
+                this.eventToOrganize = value;
             }
         }
         

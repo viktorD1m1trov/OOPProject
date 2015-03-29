@@ -7,16 +7,16 @@ namespace Test
 {
     public interface IParticipant
     {
-        int IsParticipant
+        bool IsParticipant
         {
             get;
-            set;
         }
 
-        int Event
+        Event EventToOrganize
         {
             get;
-            set;
         }
+
+        void PayForAttendance(Participant participant, decimal moneyPaid);
     }
 }

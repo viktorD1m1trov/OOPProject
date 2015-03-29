@@ -8,84 +8,145 @@ namespace Test
 {
     public class Participant : Person, IParticipant, IDriver
     {
-        private int moneyPaid;
-        private int gsm;
-        private int email;
+        private bool hasPaid = false;
+        private string gsm;
+        private Event eventToAttend;
+        private string meetPoint;
+        private decimal moneyPaid;
+        private string email;
+        private int seatsAvailable;
+        private static int participantCount=0;
 
-        public int IsParticipant
+        //constructor
+        public Participant()
+        { }
+
+        public Participant(string name, Event eventToJoin, string email, string gsm, decimal moneyPaid )
         {
-            get;
-            set;
+            this.Name = name;
+            this.EventToOrganize = eventToJoin;
+            this.EMail = email;
+            this.GSM = gsm;
+            this.MoneyPaid = moneyPaid;
+            ++participantCount;
         }
 
-        public int Event
+        public bool IsParticipant
         {
             get;
-            set;
+           private set;
+        }
+
+        public Event EventToOrganize
+        {
+            get
+            {
+                return this.eventToAttend;
+            }
+           private set
+            {
+                this.eventToAttend = new Event();
+            }
         }
         public int SeatsAvailable
         {
+            get
+            {
+                return this.seatsAvailable;
+            }
+            set
+            {
+                if (value<0)
+                {
+                    throw new Exception("Seats available must be greater than 0.");
+                }
+                this.seatsAvailable = value;
+            }
+        }
+        public string  MeetPoint
+        {
             get;
             set;
         }
-
-        public int MeetPoint
-        {
-            get;
-            set;
-        }
-        public int HasPaid
+        public bool HasPaid
         {
             get
             {
-                throw new System.NotImplementedException();
+                return this.hasPaid;
             }
-            set
+          private  set
             {
+                this.hasPaid = value;
             }
         }
-
-        public int GSM
+        public string GSM
         {
             get
             {
-                throw new System.NotImplementedException();
+                return this.gsm;
             }
             set
             {
+                if (string.IsNullOrEmpty(value) || value.Length<8)
+                {
+                    throw new Exception("Length of GSM number must be at least 8 symbols.");
+                }
+                this.gsm = value;
             }
         }
-
-        public int Mai
+        public decimal MoneyPaid
         {
             get
             {
-                throw new System.NotImplementedException();
+                return this.moneyPaid;
             }
-            set
+           private set
             {
+                if (value<0)
+                {
+                    throw new Exception("Money paid must be greater than 0.");
+                }
+                this.moneyPaid = value;
             }
         }
-
-        public int MoneyPaid
+        public string EMail
         {
             get
             {
-                throw new System.NotImplementedException();
+                return this.email;
             }
             set
             {
+                if (string.IsNullOrEmpty(value) || value.Length<2 || !value.Contains('@'))
+                {
+                    throw new Exception("Invalid e-mail.");
+                }
+                this.email = value;
+            }
+        }
+      
+        public void PayForAttendance(Participant participant, decimal moneyPaid)
+        {
+            if (moneyPaid<EventToOrganize.Budget/participantCount)
+            {
+                participant.HasPaid = true;
+            }
+            else
+            {
+                participant.HasPaid = false;
+                Console.WriteLine("Money paid not enough.");
             }
         }
 
-        public int EMai
+        string IDriver.MeetPoint
         {
             get
             {
-                throw new System.NotImplementedException();
+                throw new NotImplementedException();
             }
             set
             {
+                throw new NotImplementedException();
             }
         }
     }

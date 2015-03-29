@@ -7,85 +7,126 @@ namespace Test
 {
     public class Event
     {
-        private int meetingPoint;
-        private int budget;
-        private int field;
-    
+        public string Title
+        {
+            get
+            {
+                return this.Title;
+            }
+            private set
+            {
+                if (string.IsNullOrEmpty(value) || value.Length<2)
+                {
+                    throw new Exception("Event title length must be at least 2 symbols.");
+                }
+                this.Title = value;
+            }
+        }
+
         public DateTime DateTime
         {
             get
             {
                 throw new System.NotImplementedException();
             }
-            set
+            private set
             {
+                if (value==default(DateTime))
+                {
+                    throw new Exception("Date must have value.");
+                }
+                this.DateTime = value;
             }
         }
 
-        public int Location
+        public Location Location
         {
             get
             {
-                throw new System.NotImplementedException();
+                return this.Location;
             }
-            set
+           private set
             {
+                this.Location = new Location();
             }
         }
 
-        public int Organizer
+        public Organizer Organizer
         {
             get
             {
-                throw new System.NotImplementedException();
+                return this.Organizer;
             }
-            set
+           private set
             {
+                this.Organizer = new Organizer();
             }
         }
 
-        public int Participants
+        public List<Participant> ParticipantsList
         {
             get
             {
-                throw new System.NotImplementedException();
+                return this.ParticipantsList;
             }
-            set
+          private  set
             {
+                this.ParticipantsList = new List<Participant>();
             }
         }
 
-        public int MeetingPoint
+        public string MeetingPoint
         {
             get
             {
-                throw new System.NotImplementedException();
+                return this.MeetingPoint;
             }
-            set
+           private set
             {
+                if (string.IsNullOrEmpty(MeetingPoint))
+                {
+                    throw new Exception("Meeting point must be assigned.");
+                }
+                this.MeetingPoint = value;
             }
         }
 
-        public int Budget
+        public decimal Budget
         {
             get
             {
-                throw new System.NotImplementedException();
+                return this.Budget;
             }
-            set
+           private set
             {
+                if (value<0)
+                {
+                    throw new Exception("Budget of the event must be assigned.");
+                }
+                this.Budget = value;
             }
         }
 
-        public int EventStaff
+        public List<EventStaff> EventStaff
         {
             get
             {
-                throw new System.NotImplementedException();
+                return this.EventStaff;
             }
-            set
+           private set
             {
+               this.EventStaff= new List<EventStaff>();
             }
         }
+
+        public override string ToString()
+        {
+            return String.Format(@"Event: {0}
+                                   Date: {1}
+                                   Location: {2}
+                                   Organizer: {3}
+                                   Meeting point: {4}", this.Title, this.DateTime, this.Location, this.Organizer, this.MeetingPoint);
+        }
+
     }
 }

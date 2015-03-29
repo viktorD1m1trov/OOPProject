@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Test
 {
-    public class Admin //: Organizer
+    public class Admin : Organizer
     {
         private static string password = "mypass";
         public static bool IsCorrect(string s)

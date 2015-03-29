@@ -7,25 +7,40 @@ namespace Test
 {
     public abstract class Person
     {
-        public int Name
+
+        private string name;
+        private string gender;
+        //constructor
+
+        public string Name
         {
             get
             {
-                 throw new System.NotImplementedException();
+                return this.name;
             }
-            set
+          protected  set
             {
+                if (string.IsNullOrEmpty(value) || value.Length<2)
+                {
+                    throw new Exception("Name length must be greater than 2.");
+                }
+                this.name = value;
             }
         }
 
-        public int Gender
+        public string Gender
         {
             get
             {
-                throw new System.NotImplementedException();
+                return this.gender;
             }
-            set
+           protected set
             {
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new Exception("Gender must be specified.");
+                }
+                this.gender = value;
             }
         }
 
