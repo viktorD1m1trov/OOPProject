@@ -48,6 +48,7 @@ namespace WpfApplication1
         {
             Login form = new Login();
             form.Show();
+            ButtonLogin.IsEnabled = false;
         }
 
     }

@@ -29,8 +29,22 @@ namespace WpfApplication1
             MyLoginWindow.Left = (System.Windows.SystemParameters.PrimaryScreenWidth / 2) - MyLoginWindow.Width;
             //win.Show();
             txtBoxForPassWord.Visibility = System.Windows.Visibility.Hidden;
+            
         }
 
+        protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
+        {
+            foreach (Window item in Application.Current.Windows)
+            {
+                if (item.GetType() == typeof(MainWindow))
+                {
+                    (item as MainWindow).ButtonLogin.IsEnabled = true;
+                }
+            }
+            
+            base.OnClosing(e);
+        }
+        
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
@@ -38,15 +52,13 @@ namespace WpfApplication1
             {
                 foreach (Window item in Application.Current.Windows)
                 {
-                    if(item.GetType() == typeof(MainWindow))
+                    if (item.GetType() == typeof(MainWindow))
                     {
                         (item as MainWindow).AddButtoin.IsEnabled = true;
+                        (item as MainWindow).ButtonLogin.IsEnabled = true;
                     }
                 }
                 MyLoginWindow.Close();
-                //win.IsEnabled = true;
-                //win.ButtonLogin.IsEnabled = false;
-                
             }
             else
             {
