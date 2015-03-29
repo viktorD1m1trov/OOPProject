@@ -39,6 +39,13 @@
   </Class>
   <Class Name="Test.Event">
     <Position X="4.25" Y="5.75" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="Test.Event.Status" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Classes\Event.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAABAAEAEAAIACAAAAAAMAAQAAAAAAAAAgAA=</HashCode>
       <FileName>Classes\Event.cs</FileName>

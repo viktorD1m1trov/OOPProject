@@ -119,6 +119,11 @@ namespace Test
             }
         }
 
+        public enum Status
+        {
+            Active, Cancelled, Past
+        }
+
         public override string ToString()
         {
             return String.Format(@"Event: {0}
@@ -127,6 +132,7 @@ namespace Test
                                    Organizer: {3}
                                    Meeting point: {4}", this.Title, this.DateTime, this.Location, this.Organizer, this.MeetingPoint);
         }
+
 
     }
 }

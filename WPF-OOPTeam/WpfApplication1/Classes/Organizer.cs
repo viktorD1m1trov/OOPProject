@@ -25,23 +25,23 @@ namespace Test
             }
             set
             {
-                this.eventToOrganize = value;
+                this.eventToOrganize = new Event();
             }
         }
         
-        public void AddParticipant()
+        public void AddParticipant(List<Participant> participantList, Participant newParticipant)
         {
-            throw new System.NotImplementedException();
+            participantList.Add(newParticipant);
         }
 
-        public void DeleteParticipant()
+        public void DeleteParticipant(List<Participant> participantList, Participant participantToDelete)
         {
-            throw new System.NotImplementedException();
+            participantList.Remove(participantToDelete);
         }
 
-        public void ChangeStatus()
+        public void ChangeStatus(Event organizedEvent)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
     }
 }
