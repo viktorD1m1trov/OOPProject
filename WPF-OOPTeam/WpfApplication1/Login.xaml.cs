@@ -20,30 +20,63 @@ namespace WpfApplication1
     /// </summary>
     public partial class Login : Window
     {
-        MainWindow win = new MainWindow();
+        //MainWindow win = new MainWindow();
 
         public Login()
         {
             InitializeComponent();
             MyLoginWindow.Top = (System.Windows.SystemParameters.PrimaryScreenHeight / 2) - MyLoginWindow.Height;
             MyLoginWindow.Left = (System.Windows.SystemParameters.PrimaryScreenWidth / 2) - MyLoginWindow.Width;
-            win.Show();
+            //win.Show();
+            txtBoxForPassWord.Visibility = System.Windows.Visibility.Hidden;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
-
             if (Admin.IsCorrect(PassBox.Password))
             {
-
+                foreach (Window item in Application.Current.Windows)
+                {
+                    if(item.GetType() == typeof(MainWindow))
+                    {
+                        (item as MainWindow).AddButtoin.IsEnabled = true;
+                    }
+                }
                 MyLoginWindow.Close();
-                win.IsEnabled = true;
+                //win.IsEnabled = true;
+                //win.ButtonLogin.IsEnabled = false;
+                
             }
             else
             {
                 PassBox.Background = Brushes.Red;
             }
+            
+        }
+        public void ShowPassword()
+        {
+            PassBox.Visibility = System.Windows.Visibility.Hidden;
+            txtBoxForPassWord.Visibility = System.Windows.Visibility.Visible;
+            txtBoxForPassWord.Text = PassBox.Password;
+        }
+        public void HidePassword()
+        {
+            PassBox.Visibility = System.Windows.Visibility.Visible;
+            txtBoxForPassWord.Visibility = System.Windows.Visibility.Hidden;
+            txtBoxForPassWord.Text = PassBox.Password;
+            PassBox.Focus();
+        }
+        
+
+        private void ShowPass_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            ShowPassword();
+        }
+
+        private void ShowPass_PreviewMouseUp(object sender, MouseButtonEventArgs e)
+        {
+            HidePassword();
         }
     }
 }

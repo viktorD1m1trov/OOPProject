@@ -24,23 +24,30 @@ namespace WpfApplication1
 
     public partial class MainWindow : Window
     {
-        public ICollectionView MyCollection { get; private set; }
-        public List<string> MyTexts { get; private set; }
+        
         public MainWindow()
         {
             InitializeComponent();
-            var colllect = new List<string>
+            var colllect = new List<Admin>
                 {
-                        "Mistik",
-                        "LIon",
-                        "Lafka",
-                        "armagedon",
-                        "Selfie",
-                        "Dragon"
+                        
+                        new Admin { Event = 1, Name = "Nomer1"},
+                        new Admin { Event = 2, Name = "Nomer2"},
+                        new Admin { Event = 3, Name = "Nomer3"},
+                        new Admin { Event = 4, Name = "Nomer4"},
+                        new Admin { Event = 5, Name = "Nomer5"},
+                        new Admin { Event = 6, Name = "Nomer6"},
                 };
-                
+
             
-            MyCollection = CollectionViewSource.GetDefaultView(colllect);
+            MyDataGrid.ItemsSource = colllect;
+            
+        }
+        
+        private void ButtonLogin_Click(object sender, RoutedEventArgs e)
+        {
+            Login form = new Login();
+            form.Show();
         }
 
     }

@@ -4,7 +4,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:System="clr-namespace:System;assembly=mscorlib" x:Name="Home" x:Class="WpfApplication1.MainWindow"
         
-        Title="EventName" Height="350" Width="525" IsEnabled="False">
+        Title="EventName" Height="350" Width="525" >
 
     <Window.Resources>
         <Style x:Key="MyStyle" TargetType="{x:Type Control}">
@@ -13,7 +13,7 @@
         </Style>
     </Window.Resources>
     <Grid >
-        <DataGrid HorizontalAlignment="Left" Margin="187,44,0,0" VerticalAlignment="Top" Height="227" Width="320"/>
+        <DataGrid IsReadOnly="True" x:Name="MyDataGrid" HorizontalAlignment="Left" Margin="187,44,0,0" VerticalAlignment="Top" Height="227" Width="320" ItemsSource="{Binding MyCollection}" />
         <!--ItemsSource="{Binding Source = MyCollection}"-->
         <Label Style="{StaticResource MyStyle}" Content="Participants" HorizontalAlignment="Left" Margin="292,10,0,0" VerticalAlignment="Top"/>
         <Label Style="{StaticResource MyStyle}" Content="Events" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.475,0.498" Margin="58,21,0,0"/>
@@ -23,7 +23,12 @@
             <Label Content="Event2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"></Label>
 
         </ComboBox>
-        <TextBlock HorizontalAlignment="Left" Margin="31,145,0,0" TextWrapping="Wrap" Text="Event Info" VerticalAlignment="Top" Height="126" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="31,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" Width="120"><Run Text="Event Info"/></TextBlock>
+        <Button Style="{StaticResource MyStyle}" x:Name="ButtonLogin" Content="Login" HorizontalAlignment="Left" Margin="46,106,0,0" VerticalAlignment="Top" Width="75" Click="ButtonLogin_Click"/>
+        <Button Style="{StaticResource MyStyle}" x:FieldModifier="public" x:Name="AddButtoin" Content="Add Participant" HorizontalAlignment="Left" Margin="31,192,0,0" VerticalAlignment="Top" Width="136" IsEnabled="False" RenderTransformOrigin="0.48,0.5" Height="28"/>
+        <TextBlock TextWrapping="Wrap" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="31,225,0,0" Height="63" Width="136" Text="Login to activate this button"/>
+
+
 
     </Grid>
 </Window>
