@@ -39,6 +39,9 @@
   </Class>
   <Class Name="Test.Event">
     <Position X="4.25" Y="5.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
     <NestedTypes>
       <Enum Name="Test.Event.Status" Collapsed="true">
         <TypeIdentifier>
