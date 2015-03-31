@@ -1,11 +1,20 @@
-﻿
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Test.Enumerations;
+
 namespace Test
 {
-    using System;
-    using System.Collections.Generic;
-
-    public abstract class EventStaff : Person
+    //dobaveno Andrej 27.03
+    public class EventStaff : Person
     {
-       
+        public EventStaff(string firstName, string lastName, Gender sex = Gender.nonSpecified, EventStaffType type = EventStaffType.other)
+            : base(firstName, lastName, sex)
+        {
+            this.Type = type;
+        }
+
+        public EventStaffType Type { get; private set; }
     }
 }

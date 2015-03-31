@@ -2,48 +2,59 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Test.Enumerations;
 
 namespace Test
 {
     public abstract class Person
     {
+        private string firstName;
+        private string lastName;
+        public Person()
+        {
 
-        private string name;
-        private string gender;
-        //constructor
+        }
+        public Person(string firstName, string lastName, Gender sex = Gender.nonSpecified)
+        {
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.Gender = sex;
+        }
 
-        public string Name
+        public string FirstName
         {
             get
             {
-                return this.name;
+                return this.firstName;
             }
-          protected  set
+            protected set
             {
-                if (string.IsNullOrEmpty(value) || value.Length<2)
+                if (string.IsNullOrEmpty(value) || value.Length < 2)
                 {
                     throw new Exception("Name length must be greater than 2.");
                 }
-                this.name = value;
+                this.firstName = value;
             }
         }
-
-        public string Gender
+        public string LastName
         {
             get
             {
-                return this.gender;
+                return this.lastName;
             }
-           protected set
+            protected set
             {
-                if (string.IsNullOrEmpty(value))
+                if (string.IsNullOrEmpty(value) || value.Length < 2)
                 {
-                    throw new Exception("Gender must be specified.");
+                    throw new Exception("Name length must be greater than 2.");
                 }
-                this.gender = value;
+                this.lastName = value;
             }
         }
 
+        public Gender Gender { get; private set; }
+
+        
         public void RoomDistribuition(Participant person)//  Rooms room
         {
             throw new System.NotImplementedException();

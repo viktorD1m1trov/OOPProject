@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,9 +22,10 @@ namespace Test
         public Participant()
         { }
 
-        public Participant(string name, Event eventToJoin, string email, string gsm, decimal moneyPaid )
+        public Participant(string firstName, string lastName, Event eventToJoin, string email, string gsm, decimal moneyPaid )
         {
-            this.Name = name;
+            this.FirstName = firstName;
+            this.LastName = lastName;
             this.EventToOrganize = eventToJoin;
             this.EMail = email;
             this.GSM = gsm;
@@ -147,6 +149,15 @@ namespace Test
             set
             {
                 throw new NotImplementedException();
+            }
+        }
+        //dobaveno Andrej 27.03
+        public void AddMusicalWish(string wish)
+        {
+            StreamWriter sw = new StreamWriter("..\\..\\MusicalWishList.txt");
+            using (sw)
+            {
+                sw.WriteLine(wish);
             }
         }
     }
