@@ -69,6 +69,9 @@
     <Compile Include="Classes\AnimationStaff.cs" />
     <Compile Include="Classes\Cook.cs" />
     <Compile Include="Classes\DJ.cs" />
+    <Compile Include="Classes\Enumarations\EventStaffType.cs" />
+    <Compile Include="Classes\Enumarations\Gender.cs" />
+    <Compile Include="Classes\Enumarations\PaymentMethod.cs" />
     <Compile Include="Classes\IDriver.cs" />
     <Compile Include="Classes\Event.cs" />
     <Compile Include="Classes\EventStaff.cs" />
@@ -81,6 +84,7 @@
     <Compile Include="Classes\Person.cs" />
     <Compile Include="Classes\RestaurantStaff.cs" />
     <Compile Include="Classes\Singer.cs" />
+    <Compile Include="Classes\Test.cs" />
     <Compile Include="Classes\Waiter.cs" />
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>

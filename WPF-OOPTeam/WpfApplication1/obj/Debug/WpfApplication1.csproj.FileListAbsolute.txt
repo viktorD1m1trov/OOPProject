@@ -58,3 +58,6 @@ C:\Users\My PC\Documents\Visual Studio 2013\Projects\OOPProject\WPF-OOPTeam\WpfA
 C:\Users\My PC\Documents\Visual Studio 2013\Projects\OOPProject\WPF-OOPTeam\WpfApplication1\obj\Debug\WpfApplication1.csproj.GenerateResource.Cache
 C:\Users\My PC\Documents\Visual Studio 2013\Projects\OOPProject\WPF-OOPTeam\WpfApplication1\bin\Debug\WpfApplication1.exe
 C:\Users\My PC\Documents\Visual Studio 2013\Projects\OOPProject\WPF-OOPTeam\WpfApplication1\bin\Debug\WpfApplication1.pdb
+C:\Users\andro\Desktop\New folder (2)\OOPProject\WPF-OOPTeam\WpfApplication1\bin\Debug\WpfApplication1.exe.config
+C:\Users\andro\Desktop\New folder (2)\OOPProject\WPF-OOPTeam\WpfApplication1\obj\Debug\WpfApplication1.exe
+C:\Users\andro\Desktop\New folder (2)\OOPProject\WPF-OOPTeam\WpfApplication1\obj\Debug\WpfApplication1.pdb
