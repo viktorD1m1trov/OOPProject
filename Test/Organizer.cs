@@ -1,29 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Test
+﻿namespace Test
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using Enumerations;
+
     public class Organizer : Participant, IParticipant
     {
-        public int Event
+
+        public Organizer(string firstName, string lastName, Gender sex = Gender.NonSpecified)
+            : base(firstName, lastName, sex)
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
         }
 
-        public void AddParticipant()
+        public void AddParticipant(Participant participant, Event @event)
         {
             throw new System.NotImplementedException();
         }
 
-        public void DeleteParticipant()
+        public void DeleteParticipant(Participant participant, Event @event)
         {
             throw new System.NotImplementedException();
         }

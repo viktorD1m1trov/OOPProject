@@ -1,22 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Test
+﻿namespace Test
 {
     public interface IParticipant
     {
-        int IsParticipant
-        {
-            get;
-            set;
-        }
+        bool IsParticipant { get; set; }
 
-        int Event
-        {
-            get;
-            set;
-        }
+        Event Event { get; set; }
     }
 }

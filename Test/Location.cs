@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Test
+﻿namespace Test
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+
     public class Location
     {
         public int Restaurant
@@ -17,23 +17,23 @@ namespace Test
             {
             }
         }
-    
-       public struct Coordinates
-        {
-            public int X{get;set;}
-            public int Y {get;set;}
 
-           public Coordinates (int x, int y) //constructor 
-        :this()
+        public struct Coordinates
         {
-            this.X=x;
-            this.Y=y;
-        }
+            public int X { get; set; }
+            public int Y { get; set; }
 
-        public override string ToString()
-        {
-            return string.Format("X {0}; Y {1}", X, Y);
-        }
+            public Coordinates(int x, int y) //constructor 
+                : this()
+            {
+                this.X = x;
+                this.Y = y;
+            }
+
+            public override string ToString()
+            {
+                return string.Format("X {0}; Y {1}", X, Y);
+            }
         }
     }
 }

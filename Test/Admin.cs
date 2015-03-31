@@ -1,29 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Test
+﻿namespace Test
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using Enumerations;
+
     public class Admin : Organizer
     {
-        public int Event
+        public Admin(string firstName, string lastName, Gender sex = Gender.NonSpecified)
+            : base(firstName, lastName, sex)
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
         }
-    
-        public void AddEvent()
+
+        public void AddEvent(Event @event)
         {
             throw new System.NotImplementedException();
         }
 
-        public void DeleteEvent()
+        public void DeleteEvent(Event @event)
         {
             throw new System.NotImplementedException();
         }

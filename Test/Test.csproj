@@ -51,11 +51,12 @@
     <Compile Include="Location.cs" />
     <Compile Include="Organizer.cs" />
     <Compile Include="Participant.cs" />
-    <Compile Include="PaymentMethod.cs" />
+    <Compile Include="Enumerations\PaymentMethod.cs" />
     <Compile Include="Person.cs" />
-    <Compile Include="Rooms.cs" />
+    <Compile Include="Room.cs" />
     <Compile Include="Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Enumerations\View.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

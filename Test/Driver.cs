@@ -1,22 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Test
+﻿namespace Test
 {
     public interface IDriver
     {
-        int SeatsAvailable
-        {
-            get;
-            set;
-        }
+        int SeatsAvailable { get; set; }
 
-        int MeetPoint
-        {
-            get;
-            set;
-        }
+        int MeetPoint { get; set; }
     }
 }
