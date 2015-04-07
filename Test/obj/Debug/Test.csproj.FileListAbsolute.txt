@@ -1,2 +1,8 @@
 c:\users\my pc\documents\visual studio 2013\Projects\TeamWorkOOP\Test\bin\Debug\Test.exe.config
 C:\Users\andro\Desktop\Damnson\OOPProject\Test\bin\Debug\Test.exe.config
+C:\Users\Viktor\Desktop\New folder (2)\OOPProject\Test\bin\Debug\Test.exe.config
+C:\Users\Viktor\Desktop\New folder (2)\OOPProject\Test\bin\Debug\Test.exe
+C:\Users\Viktor\Desktop\New folder (2)\OOPProject\Test\bin\Debug\Test.pdb
+C:\Users\Viktor\Desktop\New folder (2)\OOPProject\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
+C:\Users\Viktor\Desktop\New folder (2)\OOPProject\Test\obj\Debug\Test.exe
+C:\Users\Viktor\Desktop\New folder (2)\OOPProject\Test\obj\Debug\Test.pdb
